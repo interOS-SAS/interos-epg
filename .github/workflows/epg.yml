@@ -31,14 +31,19 @@ jobs:
       - name: Generar la guía (XMLTV) para NUESTROS canales
         run: |
           cd epg
-          npm run grab -- \
-            --channels="$GITHUB_WORKSPACE/interos.channels.xml" \
-            --output="$GITHUB_WORKSPACE/guide.xml" \
-            --days=2 \
-            --maxConnections=5
-        # Si este paso falla por flags, el CLI de iptv-org/epg pudo cambiar.
-        # Alternativa: `npm run grab -- --channels=...` (sin --output) y copiar
-        # el guide.xml que genere a $GITHUB_WORKSPACE.
+          CH="$GITHUB_WORKSPACE/interos.channels.xml"
+          OUT="$GITHUB_WORKSPACE/guide.xml"
+          # iptv-org documenta TRIPLE guion (---). Probamos eso; si no, doble (--).
+          npm run grab --- --channels="$CH" --output="$OUT" --days=2 --maxConnections=5 \
+          || npm run grab --  --channels="$CH" --output="$OUT" --days=2 --maxConnections=5
+          # Verificar que algo se generó (si --output no quedó, buscar el default)
+          if [ ! -s "$OUT" ]; then
+            echo "::warning::--output vacío, buscando guide.xml por defecto"
+            FOUND="$(find . -maxdepth 3 -name 'guide.xml' -print -quit)"
+            [ -n "$FOUND" ] && cp "$FOUND" "$OUT"
+          fi
+          ls -lh "$OUT"
+          echo "Programas encontrados: $(grep -c '<programme' "$OUT" || echo 0)"
 
       - name: Publicar guide.xml en el repo
         run: |
