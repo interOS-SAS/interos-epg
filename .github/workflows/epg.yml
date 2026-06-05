@@ -1,0 +1,51 @@
+name: Generate EPG
+
+# Corre todos los días de madrugada (6:30 UTC ≈ 1:30am Colombia) y también
+# se puede disparar a mano desde la pestaña Actions (workflow_dispatch).
+on:
+  schedule:
+    - cron: '30 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write   # necesario para commitear guide.xml al repo
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (este repo)
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Clonar el grabber de iptv-org
+        run: git clone --depth 1 https://github.com/iptv-org/epg.git epg
+
+      - name: Instalar dependencias del grabber
+        run: cd epg && npm install --no-audit --no-fund
+
+      - name: Generar la guía (XMLTV) para NUESTROS canales
+        run: |
+          cd epg
+          npm run grab -- \
+            --channels="$GITHUB_WORKSPACE/interos.channels.xml" \
+            --output="$GITHUB_WORKSPACE/guide.xml" \
+            --days=2 \
+            --maxConnections=5
+        # Si este paso falla por flags, el CLI de iptv-org/epg pudo cambiar.
+        # Alternativa: `npm run grab -- --channels=...` (sin --output) y copiar
+        # el guide.xml que genere a $GITHUB_WORKSPACE.
+
+      - name: Publicar guide.xml en el repo
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          ls -lh guide.xml
+          git config user.name "epg-bot"
+          git config user.email "epg-bot@users.noreply.github.com"
+          git add guide.xml
+          git commit -m "EPG: actualización $(date -u +%F)" || echo "sin cambios"
+          git push
