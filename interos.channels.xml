@@ -1,55 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Canales de la app interOS y su fuente de guía. El xmltv_id es la clave que usa la API
+     (api/src/lib/epg.ts, EPG_BY_STREAM). Los .co nuevos son los feeds de COLOMBIA de gatotv
+     (horario EST = hora Colombia). Probados a mano el 22-sep-2026: todos con programación. -->
 <channels>
+  <!-- Nacionales -->
   <channel site="gatotv.com" lang="es" xmltv_id="CaracolTV.co" site_id="caracol_colombia">CaracolTV.co</channel>
   <channel site="mi.tv" lang="es" xmltv_id="CanalRCN.co" site_id="co#canal-rcn-hd">CanalRCN.co</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="Canal1.co" site_id="1_colombia">Canal1.co</channel>
   <channel site="mi.tv" lang="es" xmltv_id="CanalCapital.co" site_id="co#canal-capital">CanalCapital.co</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="SenalColombia.co" site_id="senal_colombia">SenalColombia.co</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="CanalTRO.co" site_id="tro">CanalTRO.co</channel>
-  <channel site="mi.tv" lang="es" xmltv_id="WinSports.co" site_id="co#win-sports-hd">WinSports.co</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="Teleantioquia.co" site_id="teleantioquia">Teleantioquia.co</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="Telecafe.co" site_id="telecafe">Telecafe.co</channel>
-  <channel site="mi.tv" lang="es" xmltv_id="Cristovision.co" site_id="co#cristo-vision">Cristovision.co</channel>
-  <channel site="mi.tv" lang="es" xmltv_id="RumbaTV.co" site_id="pe#rumba-tv">RumbaTV.co</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="Zoom.co" site_id="zoom_colombia">Zoom.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="ESPNLatinAmerica.us" site_id="espn_chile">ESPNLatinAmerica.us</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="CityTV.co" site_id="city_tv">CityTV.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Canal13.co" site_id="13_de_colombia">Canal13.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="CanalCongreso.co" site_id="congreso_colombia">CanalCongreso.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="CanalInstitucional.co" site_id="institucional_colombia">CanalInstitucional.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Teleislas.co" site_id="teleislas">Teleislas.co</channel>
+  <!-- Deportes (feeds de COLOMBIA; antes ESPN=Chile, ESPN 3=Sur, ESPN 4=Norte, ESPN 5=Fox Sports 2 de Chile) -->
+  <channel site="mi.tv" lang="es" xmltv_id="WinSports.co" site_id="co#win-sports-hd">WinSports.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="ESPN.co" site_id="espn_colombia">ESPN.co</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="ESPN2LatinAmerica.us" site_id="espn_2_colombia">ESPN2LatinAmerica.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="ESPN3LatinAmerica.us" site_id="espn_3_sur">ESPN3LatinAmerica.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="ESPN4LatinAmerica.us" site_id="espn_4_norte">ESPN4LatinAmerica.us</channel>
-  <channel site="mi.tv" lang="es" xmltv_id="FoxSports1.cl" site_id="cl#fox-sports-1-hd">FoxSports1.cl</channel>
-  <channel site="mi.tv" lang="es" xmltv_id="FoxSports2LatinAmerica.us" site_id="cl#fox-sports-2">FoxSports2LatinAmerica.us</channel>
-  <channel site="directv.com.uy" lang="es" xmltv_id="TyCSports.ar" site_id="629#TYCS">TyCSports.ar</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="CartoonNetworkLatinAmerica.us" site_id="cartoon_network_mexico">CartoonNetworkLatinAmerica.us</channel>
-  <channel site="directv.com.uy" lang="es" xmltv_id="NickelodeonLatinAmerica.us" site_id="308#NICK">NickelodeonLatinAmerica.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="DisneyJunior.es" site_id="disney_junior_espana">DisneyJunior.es</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="DiscoveryKidsLatinAmerica.us" site_id="discovery_kids_chile">DiscoveryKidsLatinAmerica.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="DiscoveryChannelLatinAmerica.us" site_id="discovery_channel_chile">DiscoveryChannelLatinAmerica.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="DiscoveryScienceLatinAmerica.us" site_id="discovery_science_latinoamerica">DiscoveryScienceLatinAmerica.us</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="DiscoveryTurboLatinAmerica.us" site_id="DTU">DiscoveryTurboLatinAmerica.us</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="ESPN3.co" site_id="espn_3_colombia">ESPN3.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="ESPN4.co" site_id="espn_4_colombia">ESPN4.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="ESPN5.co" site_id="espn_5_colombia">ESPN5.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="ESPN6.co" site_id="espn_6_colombia">ESPN6.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="ESPN7.co" site_id="espn_7_colombia">ESPN7.co</channel>
+  <!-- Infantiles (antes Disney Junior = España, Discovery Kids = Chile, Cartoon = México) -->
+  <channel site="gatotv.com" lang="es" xmltv_id="CartoonNetwork.co" site_id="cartoon_network_colombia">CartoonNetwork.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="DisneyJunior.co" site_id="disney_junior_colombia">DisneyJunior.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="DiscoveryKids.co" site_id="discovery_kids_colombia">DiscoveryKids.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Cartoonito.co" site_id="cartoonito_colombia">Cartoonito.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="DisneyChannel.co" site_id="disney_channel_colombia">DisneyChannel.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Tooncast.us" site_id="tooncast">Tooncast.us</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="BabyTVLatinAmerica.us" site_id="baby_tv_latinoamerica">BabyTVLatinAmerica.us</channel>
+  <!-- Documentales -->
+  <channel site="gatotv.com" lang="es" xmltv_id="DiscoveryChannel.co" site_id="discovery_channel_colombia">DiscoveryChannel.co</channel>
   <channel site="directv.com.uy" lang="es" xmltv_id="AnimalPlanetLatinAmerica.us" site_id="734#ANML">AnimalPlanetLatinAmerica.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="HistoryLatinAmerica.us" site_id="history_panregional">HistoryLatinAmerica.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="History2LatinAmerica.us" site_id="history_2_mexico">History2LatinAmerica.us</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="DiscoveryTurboLatinAmerica.us" site_id="discovery_turbo_latinoamerica">DiscoveryTurboLatinAmerica.us</channel>
+  <channel site="directv.com.uy" lang="es" xmltv_id="TLCLatinAmerica.us" site_id="740#TLC">TLCLatinAmerica.us</channel>
   <channel site="directv.com.uy" lang="es" xmltv_id="NationalGeographicLatinAmerica.us" site_id="730#NGEO">NationalGeographicLatinAmerica.us</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="TNTSeriesLatinAmerica.us" site_id="TNS">TNTSeriesLatinAmerica.us</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="HistoryLatinAmerica.us" site_id="history_panregional">HistoryLatinAmerica.us</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="History2.co" site_id="history_2_colombia">History2.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="InvestigationDiscovery.co" site_id="investigation_discovery_colombia">InvestigationDiscovery.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="DiscoveryHomeHealth.co" site_id="discovery_home_and_health_colombia">DiscoveryHomeHealth.co</channel>
+  <channel site="directv.com.uy" lang="es" xmltv_id="ElGourmet.ar" site_id="232#GOUR">ElGourmet.ar</channel>
+  <!-- Películas y series -->
   <channel site="gatotv.com" lang="es" xmltv_id="TNTLatinAmerica.us" site_id="tnt_mexico">TNTLatinAmerica.us</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="TNTSeriesLatinAmerica.us" site_id="tnt_series">TNTSeriesLatinAmerica.us</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="WarnerChannel.us" site_id="warner_tv_panregional">WarnerChannel.us</channel>
-  <channel site="programacion.tcc.com.uy" lang="es" xmltv_id="SonyMoviesLatinAmerica.us" site_id="468">SonyMoviesLatinAmerica.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="HBOFamilyLatinAmerica.us" site_id="hbo_family_latinoamerica">HBOFamilyLatinAmerica.us</channel>
-  <channel site="meuguia.tv" lang="pt" xmltv_id="AMCLatinAmerica.us" site_id="MGM">AMCLatinAmerica.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="CinemaxLatinAmerica.us" site_id="cinemax_chile">CinemaxLatinAmerica.us</channel>
-  <channel site="directv.com.uy" lang="es" xmltv_id="Cinecanal.us" site_id="507#CC">Cinecanal.us</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="SonyChannelAndes.us" site_id="sony_andes">SonyChannelAndes.us</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="SonyMovies.co" site_id="sony_movies_colombia">SonyMovies.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Cinemax.co" site_id="cinemax_colombia">Cinemax.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Cinecanal.co" site_id="cinecanal_colombia">Cinecanal.co</channel>
   <channel site="directv.com.uy" lang="es" xmltv_id="DePeliculaLatinAmerica.mx" site_id="516#DPEL">DePeliculaLatinAmerica.mx</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="Space.ar" site_id="space_mexico">Space.ar</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Space.co" site_id="space_colombia">Space.co</channel>
   <channel site="directv.com.uy" lang="es" xmltv_id="GoldenEdge.mx" site_id="517#EDGE">GoldenEdge.mx</channel>
   <channel site="directv.com.uy" lang="es" xmltv_id="Golden.mx" site_id="503#GLDN">Golden.mx</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="TCMLatinAmerica.us" site_id="tcm_panregional">TCMLatinAmerica.us</channel>
-  <channel site="directv.com.uy" lang="es" xmltv_id="TlnovelasLatinAmerica.mx" site_id="227#NVLA">TlnovelasLatinAmerica.mx</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="LasEstrellas.mx" site_id="de_las_estrellas_mexico">LasEstrellas.mx</channel>
-  <channel site="directv.com.uy" lang="es" xmltv_id="ElGourmet.ar" site_id="232#GOUR">ElGourmet.ar</channel>
   <channel site="directv.com.uy" lang="es" xmltv_id="ComedyCentralLatinAmerica.us" site_id="215#CMDY">ComedyCentralLatinAmerica.us</channel>
-  <channel site="directv.com.uy" lang="es" xmltv_id="MTVLatinAmerica.us" site_id="264#MTV">MTVLatinAmerica.us</channel>
-  <channel site="directv.com.uy" lang="es" xmltv_id="TLCLatinAmerica.us" site_id="740#TLC">TLCLatinAmerica.us</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="FX.co" site_id="fx_colombia">FX.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="AXN.co" site_id="axn_colombia">AXN.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="USANetwork.co" site_id="usa_network_colombia">USANetwork.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="EEntertainment.co" site_id="e_entertainment_television_colombia">EEntertainment.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Lifetime.co" site_id="lifetime_colombia">Lifetime.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="AE.co" site_id="a_y_e_colombia">AE.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="UniversalTV.us" site_id="universal_tv_panregional">UniversalTV.us</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="StudioUniversal.us" site_id="studio_universal_panregional">StudioUniversal.us</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="DistritoComedia.mx" site_id="distrito_comedia">DistritoComedia.mx</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="bitMe.mx" site_id="bitme">bitMe.mx</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="EuropaEuropa.ar" site_id="europa_europa">EuropaEuropa.ar</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="FilmArts.ar" site_id="film_and_arts">FilmArts.ar</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="DHE.us" site_id="dhe">DHE.us</channel>
+  <!-- Novelas -->
+  <channel site="gatotv.com" lang="es" xmltv_id="LasEstrellas.co" site_id="las_estrellas_colombia">LasEstrellas.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Tlnovelas.co" site_id="tlnovelas_colombia">Tlnovelas.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="TNTNovelas.co" site_id="tnt_novelas_colombia">TNTNovelas.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Univision.co" site_id="univision_colombia">Univision.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Telemundo.co" site_id="telemundo_colombia">Telemundo.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="AztecaCorazon.mx" site_id="tv_azteca_corazon">AztecaCorazon.mx</channel>
+  <!-- Noticias -->
   <channel site="cableplus.com.uy" lang="es" xmltv_id="CNNenEspanol.us" site_id="62">CNNenEspanol.us</channel>
-  <channel site="tvguide.com" lang="en" xmltv_id="Telemundo.us" site_id="9200011927">Telemundo.us</channel>
-  <channel site="anteltv.com.uy" lang="es" xmltv_id="Telesur.ve" site_id="2s68c">Telesur.ve</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="CNNInternational.us" site_id="cnn_internacional">CNNInternational.us</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="DWEspanol.de" site_id="dw_latinoamerica">DWEspanol.de</channel>
+  <!-- Religiosos -->
+  <channel site="mi.tv" lang="es" xmltv_id="Cristovision.co" site_id="co#cristo-vision">Cristovision.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Enlace.cr" site_id="enlace">Enlace.cr</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="EWTN.us" site_id="ewtn_en_espanol">EWTN.us</channel>
+  <!-- Música -->
+  <channel site="mi.tv" lang="es" xmltv_id="RumbaTV.co" site_id="pe#rumba-tv">RumbaTV.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="MTV.co" site_id="mtv_colombia">MTV.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Bandamax.mx" site_id="bandamax">Bandamax.mx</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Telehit.mx" site_id="telehit">Telehit.mx</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="TelehitMusica.mx" site_id="telehit_musica">TelehitMusica.mx</channel>
 </channels>

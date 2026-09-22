@@ -6,7 +6,11 @@ en un **GitHub Action** (gratis, no carga el servidor). La API de interOS descar
 el `guide.xml` resultante y muestra "ahora / después" en cada canal.
 
 ## Archivos
-- `interos.channels.xml` — los 23 canales con su fuente de guía (xmltv_id + site).
+- `interos.channels.xml` — los 82 canales con su fuente de guía (xmltv_id + site).
+  Se prefieren los feeds de **Colombia** de gatotv (`*_colombia`, hora EST = hora
+  Colombia). El `xmltv_id` es la clave que usa la API (`api/src/lib/epg.ts`,
+  `EPG_BY_STREAM`): si cambias uno acá, cámbialo allá también.
+- `epg-backend-map.json` — copia de referencia del mapa streamId → xmltv_id de la API.
 - `.github/workflows/epg.yml` — el workflow que corre el grabber 1×/día.
 - `guide.xml` — (lo genera el workflow) la guía resultante.
 
@@ -28,6 +32,6 @@ el `guide.xml` resultante y muestra "ahora / después" en cada canal.
 
 ## Notas
 - El grabber tarda unos minutos (raspa gatotv.com, mi.tv, directv.com.uy, etc.).
-- Si el paso "Generar la guía" falla, mirá los logs del Action: el CLI de
+- Si el paso "Generar la guía" falla, mira los logs del Action: el CLI de
   iptv-org/epg pudo cambiar sus flags (ver comentario en el workflow).
-- Para agregar/quitar canales o cambiar una fuente: editá `interos.channels.xml`.
+- Para agregar/quitar canales o cambiar una fuente: edita `interos.channels.xml`.
