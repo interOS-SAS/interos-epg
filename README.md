@@ -1,18 +1,32 @@
 # interOS — EPG (guía de TV)
 
-Genera la guía de programación (XMLTV) de los canales de la app interOS, 1 vez
+Genera la guía de programación (XMLTV) de los canales de la app interOS, 2 veces
 al día, usando el grabber open-source de [iptv-org/epg](https://github.com/iptv-org/epg)
 en un **GitHub Action** (gratis, no carga el servidor). La API de interOS descarga
 el `guide.xml` resultante y muestra "ahora / después" en cada canal.
 
 ## Archivos
-- `interos.channels.xml` — los 82 canales con su fuente de guía (xmltv_id + site).
-  Se prefieren los feeds de **Colombia** de gatotv (`*_colombia`, hora EST = hora
-  Colombia). El `xmltv_id` es la clave que usa la API (`api/src/lib/epg.ts`,
-  `EPG_BY_STREAM`): si cambias uno acá, cámbialo allá también.
-- `epg-backend-map.json` — copia de referencia del mapa streamId → xmltv_id de la API.
-- `.github/workflows/epg.yml` — el workflow que corre el grabber 1×/día.
-- `guide.xml` — (lo genera el workflow) la guía resultante.
+- `interos.channels.xml` — las fuentes de guía de los canales de la app (94 de 121 con
+  guía real; el resto usa la descripción fija de `canales.json` en la API). **Se genera**
+  desde `fuentes.py` (scratch de la auditoría): varias fuentes por canal, en orden:
+  1. `@movistar` → epgshare01 `CO1` = guía de Movistar Colombia (horas exactas, sinopsis,
+     un solo archivo para todos los canales);
+  2. `@mitv` → mi.tv (entrega horas en UTC, no depende de dónde corra el Action);
+  3. `@tcc` → TCC Uruguay (solo canales panregionales: AMC Series, CGTN, HGTV, Food);
+  4. sin sufijo → gatotv. **OJO:** gatotv muestra la hora del país de quien pide (geo-IP).
+     El runner de GitHub cambia de región (eastus −4, centralus −5, westus3 −7), así que
+     antes la guía salía +1 h / 0 / −2 h según el día. El workflow mide el `utcOffset` de
+     la página y `scripts/postproceso.mjs` corrige.
+- `epg-backend-map.json` — streamId → xmltv_ids en orden de prioridad. Es **el mismo**
+  mapa que `EPG_BY_STREAM` en `api/src/lib/epg.ts`: si cambias uno, cambia el otro.
+- `scripts/postproceso.mjs` — corrige la hora de gatotv, limpia títulos
+  ("La vecinaRepetición", "… T", "SIGN OFF"), une bloques seguidos del mismo programa,
+  deja UNA fuente por canal (la primera que cubra ≥12 de las próximas 24 h y tenga títulos
+  reales) y, si un canal hoy no trae nada, arrastra lo vigente de la guía anterior.
+- `.github/workflows/epg.yml` — corre 2×/día: mide el huso de gatotv, raspa
+  (`guide.raw.xml`, no se sube), postprocesa y publica `guide.xml` + `guide-resumen.json`
+  (qué fuente ganó en cada canal, cuántas horas cubre, qué se arrastró).
+- `guide.xml` — la guía que lee la API (`EPG_GUIDE_URL`).
 
 ## Setup (una sola vez)
 1. **Crear un repo en GitHub** — ej. `interos-epg` (privado o público, da igual).

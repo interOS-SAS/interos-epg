@@ -1,18 +1,25 @@
 name: Generate EPG
 
-# Corre todos los días de madrugada (6:30 UTC ≈ 1:30am Colombia) y también
-# se puede disparar a mano desde la pestaña Actions (workflow_dispatch).
+# Dos corridas al día (06:30 y 18:30 UTC ≈ 1:30 am y 1:30 pm Colombia; GitHub suele atrasarlas
+# 5-7 h). Si una falla o una fuente se cae, la otra repone, y el postproceso arrastra lo que
+# quedaba de la guía anterior. También se puede disparar a mano (workflow_dispatch).
 on:
   schedule:
     - cron: '30 6 * * *'
+    - cron: '30 18 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write   # necesario para commitear guide.xml al repo
 
+concurrency:
+  group: epg
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout (este repo)
         uses: actions/checkout@v4
@@ -20,7 +27,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Clonar el grabber de iptv-org
         run: git clone --depth 1 https://github.com/iptv-org/epg.git epg
@@ -28,29 +35,45 @@ jobs:
       - name: Instalar dependencias del grabber
         run: cd epg && npm install --no-audit --no-fund
 
-      - name: Generar la guía (XMLTV) para NUESTROS canales
+      # gatotv muestra las horas en el huso del país de quien pide (geo-IP) y el grabber las lee
+      # como UTC−5. El runner cambia de región (eastus = −4, centralus = −5, westus3 = −7), así que
+      # medimos el utcOffset que declara la propia página y el postproceso corrige.
+      - name: Medir el huso que usa gatotv desde este runner
         run: |
+          OFF=""
+          for i in 1 2 3; do
+            OFF=$(curl -fsSL --max-time 20 -A 'Mozilla/5.0' 'https://www.gatotv.com/canal/telecafe' \
+              | grep -oE 'utcOffset: *-?[0-9]+(\.[0-9]+)?' | head -1 | grep -oE -- '-?[0-9]+(\.[0-9]+)?$' || true)
+            [ -n "$OFF" ] && break
+            sleep 5
+          done
+          echo "gatotv utcOffset=${OFF:-?} (la región de Azure sale arriba, en 'Runner Image Provisioner')"
+          echo "GATOTV_UTC_OFFSET=${OFF}" >> "$GITHUB_ENV"
+
+      - name: Generar la guía cruda (varias fuentes por canal)
+        run: |
+          cp guide.xml guide.prev.xml 2>/dev/null || true
           cd epg
           CH="$GITHUB_WORKSPACE/interos.channels.xml"
-          OUT="$GITHUB_WORKSPACE/guide.xml"
-          # iptv-org documenta TRIPLE guion (---). Probamos eso; si no, doble (--).
-          npm run grab --- --channels="$CH" --output="$OUT" --days=2 --maxConnections=5 \
-          || npm run grab --  --channels="$CH" --output="$OUT" --days=2 --maxConnections=5
-          # Verificar que algo se generó (si --output no quedó, buscar el default)
-          if [ ! -s "$OUT" ]; then
-            echo "::warning::--output vacío, buscando guide.xml por defecto"
-            FOUND="$(find . -maxdepth 3 -name 'guide.xml' -print -quit)"
-            [ -n "$FOUND" ] && cp "$FOUND" "$OUT"
-          fi
+          OUT="$GITHUB_WORKSPACE/guide.raw.xml"
+          npm run grab --- --channels="$CH" --output="$OUT" --days=2 --maxConnections=4 --timeout=20000
           ls -lh "$OUT"
-          echo "Programas encontrados: $(grep -c '<programme' "$OUT" || echo 0)"
+          echo "Programas crudos: $(grep -c '<programme' "$OUT" || echo 0)"
+
+      - name: Postproceso (hora de gatotv, títulos, una fuente por canal, arrastre)
+        run: |
+          node scripts/postproceso.mjs \
+            --crudo guide.raw.xml --anterior guide.prev.xml \
+            --canales interos.channels.xml --mapa epg-backend-map.json \
+            --gatotv-offset "${GATOTV_UTC_OFFSET}" \
+            --salida guide.xml --resumen guide-resumen.json
+          ls -lh guide.xml
+          echo "Programas publicados: $(grep -c '<programme' guide.xml || echo 0)"
 
       - name: Publicar guide.xml en el repo
         run: |
-          cd "$GITHUB_WORKSPACE"
-          ls -lh guide.xml
           git config user.name "epg-bot"
           git config user.email "epg-bot@users.noreply.github.com"
-          git add guide.xml
-          git commit -m "EPG: actualización $(date -u +%F)" || echo "sin cambios"
+          git add guide.xml guide-resumen.json
+          git commit -m "EPG: actualización $(date -u +'%F %H:%M')" || echo "sin cambios"
           git push

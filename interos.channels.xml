@@ -1,97 +1,313 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Canales de la app interOS y su fuente de guía. El xmltv_id es la clave que usa la API
-     (api/src/lib/epg.ts, EPG_BY_STREAM). Los .co nuevos son los feeds de COLOMBIA de gatotv
-     (horario EST = hora Colombia). Probados a mano el 22-sep-2026: todos con programación. -->
+<!-- Canales de la app interOS y su fuente de guía. GENERADO desde fuentes.py: no editar a mano.
+     xmltv_id = clave que usa la API (api/src/lib/epg.ts EPG_BY_STREAM, copia en epg-backend-map.json).
+     Varias fuentes por canal: gana la primera con programación suficiente (scripts/postproceso.mjs).
+     @movistar = epgshare01 CO1 (guía de Movistar Colombia, horas exactas); @mitv = mi.tv (UTC);
+     @tcc = TCC Uruguay (panregionales); sin sufijo = gatotv (hora corregida por postproceso). -->
 <channels>
   <!-- Nacionales -->
-  <channel site="gatotv.com" lang="es" xmltv_id="CaracolTV.co" site_id="caracol_colombia">CaracolTV.co</channel>
-  <channel site="mi.tv" lang="es" xmltv_id="CanalRCN.co" site_id="co#canal-rcn-hd">CanalRCN.co</channel>
+  <!--   3 Canal 1 (a05p) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="Canal1.co@movistar" site_id="CO1#Canal.1.co">Canal1.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="Canal1.co@mitv" site_id="co#canal-uno">Canal1.co@mitv</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="Canal1.co" site_id="1_colombia">Canal1.co</channel>
-  <channel site="mi.tv" lang="es" xmltv_id="CanalCapital.co" site_id="co#canal-capital">CanalCapital.co</channel>
+  <!--   5 Señal Colombia (a05n) -->
+  <channel site="mi.tv" lang="es" xmltv_id="SenalColombia.co@mitv" site_id="co#senal-colombia">SenalColombia.co@mitv</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="SenalColombia.co" site_id="senal_colombia">SenalColombia.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="CanalTRO.co" site_id="tro">CanalTRO.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="Teleantioquia.co" site_id="teleantioquia">Teleantioquia.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="Telecafe.co" site_id="telecafe">Telecafe.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="Zoom.co" site_id="zoom_colombia">Zoom.co</channel>
+  <!--   6 City TV (a0b0) -->
+  <channel site="mi.tv" lang="es" xmltv_id="CityTV.co@mitv" site_id="co#citytv">CityTV.co@mitv</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="CityTV.co" site_id="city_tv">CityTV.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="Canal13.co" site_id="13_de_colombia">Canal13.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="CanalCongreso.co" site_id="congreso_colombia">CanalCongreso.co</channel>
+  <!--   7 Teleantioquia (a0c6) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="Teleantioquia.co@movistar" site_id="CO1#Teleantioquia.co">Teleantioquia.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="Teleantioquia.co@mitv" site_id="co#teleantioquia">Teleantioquia.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Teleantioquia.co" site_id="teleantioquia">Teleantioquia.co</channel>
+  <!--   8 Canal RCN (a05m) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="CanalRCN.co@movistar" site_id="CO1#RCN.co">CanalRCN.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="CanalRCN.co" site_id="co#canal-rcn-hd">CanalRCN.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="CanalRCN.co@gatotv" site_id="rcn_colombia">CanalRCN.co@gatotv</channel>
+  <!--   9 Caracol TV (a0a8) -->
+  <channel site="mi.tv" lang="es" xmltv_id="CaracolTV.co@mitv" site_id="co#caracol">CaracolTV.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="CaracolTV.co" site_id="caracol_colombia">CaracolTV.co</channel>
+  <!--  10 Canal Institucional (b100) -->
+  <channel site="mi.tv" lang="es" xmltv_id="CanalInstitucional.co@mitv" site_id="co#senal-institucional-rtvc">CanalInstitucional.co@mitv</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="CanalInstitucional.co" site_id="institucional_colombia">CanalInstitucional.co</channel>
+  <!--  11 Canal Capital (a0cg) -->
+  <channel site="mi.tv" lang="es" xmltv_id="CanalCapital.co" site_id="co#canal-capital">CanalCapital.co</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="CanalCapital.co@gatotv" site_id="capital_colombia">CanalCapital.co@gatotv</channel>
+  <!--  12 Telecafé (a0c7) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="Telecafe.co@movistar" site_id="CO1#Telecafé.co">Telecafe.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="Telecafe.co@mitv" site_id="co#telecafe">Telecafe.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Telecafe.co" site_id="telecafe">Telecafe.co</channel>
+  <!--  13 Canal del Congreso (a0gm) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="CanalCongreso.co@movistar" site_id="CO1#CANAL.CONGRESO.co">CanalCongreso.co@movistar</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="CanalCongreso.co" site_id="congreso_colombia">CanalCongreso.co</channel>
+  <!--  14 Teleislas (a0gn) -->
   <channel site="gatotv.com" lang="es" xmltv_id="Teleislas.co" site_id="teleislas">Teleislas.co</channel>
-  <!-- Deportes (feeds de COLOMBIA; antes ESPN=Chile, ESPN 3=Sur, ESPN 4=Norte, ESPN 5=Fox Sports 2 de Chile) -->
+  <!--  15 Canal TRO (a0aw) -->
+  <channel site="mi.tv" lang="es" xmltv_id="CanalTRO.co@mitv" site_id="co#tro">CanalTRO.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="CanalTRO.co" site_id="tro">CanalTRO.co</channel>
+  <!--  16 Zoom (a0a6) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="Zoom.co@movistar" site_id="CO1#Canal.Zoom.co">Zoom.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="Zoom.co@mitv" site_id="co#zoom">Zoom.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Zoom.co" site_id="zoom_colombia">Zoom.co</channel>
+  <!--  17 Canal 13 (a0au) -->
+  <channel site="mi.tv" lang="es" xmltv_id="Canal13.co@mitv" site_id="co#canal-tr3ce">Canal13.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Canal13.co" site_id="13_de_colombia">Canal13.co</channel>
+  <!-- Deportes -->
+  <!--  63 Win Sports (a0dx) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="WinSports.co@movistar" site_id="CO1#Win.Sports.co">WinSports.co@movistar</channel>
   <channel site="mi.tv" lang="es" xmltv_id="WinSports.co" site_id="co#win-sports-hd">WinSports.co</channel>
+  <!--  65 ESPN (a0bg) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="ESPN.co@movistar" site_id="CO1#ESPN.co">ESPN.co@movistar</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="ESPN.co" site_id="espn_colombia">ESPN.co</channel>
+  <!--  66 ESPN 2 (a0bd) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="ESPN2.co@movistar" site_id="CO1#ESPN.2.co">ESPN2.co@movistar</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="ESPN2LatinAmerica.us" site_id="espn_2_colombia">ESPN2LatinAmerica.us</channel>
+  <!--  67 ESPN 3 (a0be) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="ESPN3.co@movistar" site_id="CO1#ESPN.3.co">ESPN3.co@movistar</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="ESPN3.co" site_id="espn_3_colombia">ESPN3.co</channel>
+  <!--  68 ESPN 4 (a0g7) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="ESPN4.co@movistar" site_id="CO1#ESPN.4.co">ESPN4.co@movistar</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="ESPN4.co" site_id="espn_4_colombia">ESPN4.co</channel>
+  <!--  69 ESPN 5 (a0bk) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="ESPN5.co@movistar" site_id="CO1#ESPN.5.co">ESPN5.co@movistar</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="ESPN5.co" site_id="espn_5_colombia">ESPN5.co</channel>
+  <!--  70 ESPN 6 (b022) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="ESPN6.co@movistar" site_id="CO1#ESPN.6.HD.co">ESPN6.co@movistar</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="ESPN6.co" site_id="espn_6_colombia">ESPN6.co</channel>
+  <!--  71 ESPN 7 (b023) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="ESPN7.co@movistar" site_id="CO1#ESPN.7.HD.co">ESPN7.co@movistar</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="ESPN7.co" site_id="espn_7_colombia">ESPN7.co</channel>
-  <!-- Infantiles (antes Disney Junior = España, Discovery Kids = Chile, Cartoon = México) -->
-  <channel site="gatotv.com" lang="es" xmltv_id="CartoonNetwork.co" site_id="cartoon_network_colombia">CartoonNetwork.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="DisneyJunior.co" site_id="disney_junior_colombia">DisneyJunior.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="DiscoveryKids.co" site_id="discovery_kids_colombia">DiscoveryKids.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="Cartoonito.co" site_id="cartoonito_colombia">Cartoonito.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="DisneyChannel.co" site_id="disney_channel_colombia">DisneyChannel.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="Tooncast.us" site_id="tooncast">Tooncast.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="BabyTVLatinAmerica.us" site_id="baby_tv_latinoamerica">BabyTVLatinAmerica.us</channel>
-  <!-- Documentales -->
-  <channel site="gatotv.com" lang="es" xmltv_id="DiscoveryChannel.co" site_id="discovery_channel_colombia">DiscoveryChannel.co</channel>
-  <channel site="directv.com.uy" lang="es" xmltv_id="AnimalPlanetLatinAmerica.us" site_id="734#ANML">AnimalPlanetLatinAmerica.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="DiscoveryTurboLatinAmerica.us" site_id="discovery_turbo_latinoamerica">DiscoveryTurboLatinAmerica.us</channel>
-  <channel site="directv.com.uy" lang="es" xmltv_id="TLCLatinAmerica.us" site_id="740#TLC">TLCLatinAmerica.us</channel>
-  <channel site="directv.com.uy" lang="es" xmltv_id="NationalGeographicLatinAmerica.us" site_id="730#NGEO">NationalGeographicLatinAmerica.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="HistoryLatinAmerica.us" site_id="history_panregional">HistoryLatinAmerica.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="History2.co" site_id="history_2_colombia">History2.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="InvestigationDiscovery.co" site_id="investigation_discovery_colombia">InvestigationDiscovery.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="DiscoveryHomeHealth.co" site_id="discovery_home_and_health_colombia">DiscoveryHomeHealth.co</channel>
-  <channel site="directv.com.uy" lang="es" xmltv_id="ElGourmet.ar" site_id="232#GOUR">ElGourmet.ar</channel>
-  <!-- Películas y series -->
-  <channel site="gatotv.com" lang="es" xmltv_id="TNTLatinAmerica.us" site_id="tnt_mexico">TNTLatinAmerica.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="TNTSeriesLatinAmerica.us" site_id="tnt_series">TNTSeriesLatinAmerica.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="WarnerChannel.us" site_id="warner_tv_panregional">WarnerChannel.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="SonyChannelAndes.us" site_id="sony_andes">SonyChannelAndes.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="SonyMovies.co" site_id="sony_movies_colombia">SonyMovies.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="Cinemax.co" site_id="cinemax_colombia">Cinemax.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="Cinecanal.co" site_id="cinecanal_colombia">Cinecanal.co</channel>
-  <channel site="directv.com.uy" lang="es" xmltv_id="DePeliculaLatinAmerica.mx" site_id="516#DPEL">DePeliculaLatinAmerica.mx</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="Space.co" site_id="space_colombia">Space.co</channel>
-  <channel site="directv.com.uy" lang="es" xmltv_id="GoldenEdge.mx" site_id="517#EDGE">GoldenEdge.mx</channel>
-  <channel site="directv.com.uy" lang="es" xmltv_id="Golden.mx" site_id="503#GLDN">Golden.mx</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="TCMLatinAmerica.us" site_id="tcm_panregional">TCMLatinAmerica.us</channel>
-  <channel site="directv.com.uy" lang="es" xmltv_id="ComedyCentralLatinAmerica.us" site_id="215#CMDY">ComedyCentralLatinAmerica.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="FX.co" site_id="fx_colombia">FX.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="AXN.co" site_id="axn_colombia">AXN.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="USANetwork.co" site_id="usa_network_colombia">USANetwork.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="EEntertainment.co" site_id="e_entertainment_television_colombia">EEntertainment.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="Lifetime.co" site_id="lifetime_colombia">Lifetime.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="AE.co" site_id="a_y_e_colombia">AE.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="UniversalTV.us" site_id="universal_tv_panregional">UniversalTV.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="StudioUniversal.us" site_id="studio_universal_panregional">StudioUniversal.us</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="DistritoComedia.mx" site_id="distrito_comedia">DistritoComedia.mx</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="bitMe.mx" site_id="bitme">bitMe.mx</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="EuropaEuropa.ar" site_id="europa_europa">EuropaEuropa.ar</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="FilmArts.ar" site_id="film_and_arts">FilmArts.ar</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="DHE.us" site_id="dhe">DHE.us</channel>
-  <!-- Novelas -->
-  <channel site="gatotv.com" lang="es" xmltv_id="LasEstrellas.co" site_id="las_estrellas_colombia">LasEstrellas.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="Tlnovelas.co" site_id="tlnovelas_colombia">Tlnovelas.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="TNTNovelas.co" site_id="tnt_novelas_colombia">TNTNovelas.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="Univision.co" site_id="univision_colombia">Univision.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="Telemundo.co" site_id="telemundo_colombia">Telemundo.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="AztecaCorazon.mx" site_id="tv_azteca_corazon">AztecaCorazon.mx</channel>
   <!-- Noticias -->
+  <!--  19 CNN en Español (a0b1) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="CNNenEspanol.us@movistar" site_id="CO1#CNN.Español.co">CNNenEspanol.us@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="CNNenEspanol.us@mitv" site_id="co#cnn-en-espanol">CNNenEspanol.us@mitv</channel>
   <channel site="cableplus.com.uy" lang="es" xmltv_id="CNNenEspanol.us" site_id="62">CNNenEspanol.us</channel>
+  <!--  20 CGTN Español (a0dw) -->
+  <channel site="programacion.tcc.com.uy" lang="es" xmltv_id="CGTNEspanol.cn@tcc" site_id="296">CGTNEspanol.cn@tcc</channel>
+  <!--  21 CNN International (a0b2) -->
   <channel site="gatotv.com" lang="es" xmltv_id="CNNInternational.us" site_id="cnn_internacional">CNNInternational.us</channel>
+  <!--  22 RT (a0c1) -->
+  <channel site="mi.tv" lang="es" xmltv_id="RT.ru@mitv" site_id="co#russia-today-hd">RT.ru@mitv</channel>
+  <channel site="programacion.tcc.com.uy" lang="es" xmltv_id="RT.ru@tcc" site_id="271">RT.ru@tcc</channel>
+  <!--  23 DW Español (a0bb) -->
   <channel site="gatotv.com" lang="es" xmltv_id="DWEspanol.de" site_id="dw_latinoamerica">DWEspanol.de</channel>
-  <!-- Religiosos -->
-  <channel site="mi.tv" lang="es" xmltv_id="Cristovision.co" site_id="co#cristo-vision">Cristovision.co</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="Enlace.cr" site_id="enlace">Enlace.cr</channel>
-  <channel site="gatotv.com" lang="es" xmltv_id="EWTN.us" site_id="ewtn_en_espanol">EWTN.us</channel>
+  <!-- Novelas -->
+  <!--  24 TNT Novelas (a0cb) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="TNTNovelas.co@movistar" site_id="CO1#TNT.Novelas.co">TNTNovelas.co@movistar</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="TNTNovelas.co" site_id="tnt_novelas_colombia">TNTNovelas.co</channel>
+  <!--  25 Las Estrellas (a0bs) -->
+  <channel site="gatotv.com" lang="es" xmltv_id="LasEstrellas.co" site_id="las_estrellas_colombia">LasEstrellas.co</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="LasEstrellas.co@mitv" site_id="co#canal-de-las-estrellas">LasEstrellas.co@mitv</channel>
+  <!--  26 Tlnovelas (a0c8) -->
+  <channel site="gatotv.com" lang="es" xmltv_id="Tlnovelas.co" site_id="tlnovelas_colombia">Tlnovelas.co</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="Tlnovelas.co@mitv" site_id="co#tlnovelas">Tlnovelas.co@mitv</channel>
+  <!--  27 Univision (b002) -->
+  <channel site="mi.tv" lang="es" xmltv_id="Univision.co@mitv" site_id="co#univision">Univision.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Univision.co" site_id="univision_colombia">Univision.co</channel>
+  <!--  28 Telemundo (b101) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="Telemundo.co@movistar" site_id="CO1#Telemundo.co">Telemundo.co@movistar</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Telemundo.co" site_id="telemundo_colombia">Telemundo.co</channel>
+  <!--  30 Azteca Corazón (b004) -->
+  <channel site="mi.tv" lang="es" xmltv_id="AztecaCorazon.mx@mitv" site_id="co#az-corazon">AztecaCorazon.mx@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="AztecaCorazon.mx" site_id="tv_azteca_corazon">AztecaCorazon.mx</channel>
+  <!-- Películas y series -->
+  <!--  18 Film & Arts (b027) -->
+  <channel site="gatotv.com" lang="es" xmltv_id="FilmArts.ar" site_id="film_and_arts">FilmArts.ar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="FilmArts.ar@mitv" site_id="co#film-arts">FilmArts.ar@mitv</channel>
+  <!--  53 AMC Series (b015) -->
+  <channel site="programacion.tcc.com.uy" lang="es" xmltv_id="AMCSeries.us@tcc" site_id="794">AMCSeries.us@tcc</channel>
+  <!--  54 Adult Swim (b102) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="AdultSwim.co@movistar" site_id="CO1#AdultSwim.co">AdultSwim.co@movistar</channel>
+  <!--  55 Sony Channel (a0c2) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="SonyChannel.co@movistar" site_id="CO1#Sony.co">SonyChannel.co@movistar</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="SonyChannelAndes.us" site_id="sony_andes">SonyChannelAndes.us</channel>
+  <!--  56 AXN (b103) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="AXN.co@movistar" site_id="CO1#AXN.co">AXN.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="AXN.co@mitv" site_id="co#axn">AXN.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="AXN.co" site_id="axn_colombia">AXN.co</channel>
+  <!--  57 USA Network (b016) -->
+  <channel site="gatotv.com" lang="es" xmltv_id="USANetwork.co" site_id="usa_network_colombia">USANetwork.co</channel>
+  <!--  58 E! Entertainment (b105) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="EEntertainment.co@movistar" site_id="CO1#E!.Entertainment.TV.co">EEntertainment.co@movistar</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="EEntertainment.co" site_id="e_entertainment_television_colombia">EEntertainment.co</channel>
+  <!--  59 Lifetime (b018) -->
+  <channel site="mi.tv" lang="es" xmltv_id="Lifetime.co@mitv" site_id="co#lifetime">Lifetime.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Lifetime.co" site_id="lifetime_colombia">Lifetime.co</channel>
+  <!--  60 A&E (b106) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="AE.co@movistar" site_id="CO1#A&amp;amp;E.co">AE.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="AE.co@mitv" site_id="co#a-e-mundo">AE.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="AE.co" site_id="a_y_e_colombia">AE.co</channel>
+  <!--  61 Distrito Comedia (b019) -->
+  <channel site="gatotv.com" lang="es" xmltv_id="DistritoComedia.mx" site_id="distrito_comedia">DistritoComedia.mx</channel>
+  <!--  62 BitMe (b020) -->
+  <channel site="gatotv.com" lang="es" xmltv_id="bitMe.mx" site_id="bitme">bitMe.mx</channel>
+  <!--  72 TNT (a0ca) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="TNT.co@movistar" site_id="CO1#TNT.co">TNT.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="TNT.co@mitv" site_id="co#tnt">TNT.co@mitv</channel>
+  <!--  73 AMC (a0aq) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="AMC.co@movistar" site_id="CO1#AMC.co">AMC.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="AMC.co@mitv" site_id="co#amc">AMC.co@mitv</channel>
+  <channel site="programacion.tcc.com.uy" lang="es" xmltv_id="AMC.co@tcc" site_id="273">AMC.co@tcc</channel>
+  <!--  74 Universal Channel (b104) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="UniversalTV.co@movistar" site_id="CO1#Universal.TV.co">UniversalTV.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="UniversalTV.co@mitv" site_id="co#universal-channel">UniversalTV.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="UniversalTV.us" site_id="universal_tv_panregional">UniversalTV.us</channel>
+  <!--  75 Warner Channel (a0cf) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="WarnerChannel.co@movistar" site_id="CO1#Warner.Channel.co">WarnerChannel.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="WarnerChannel.co@mitv" site_id="co#warner">WarnerChannel.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="WarnerChannel.us" site_id="warner_tv_panregional">WarnerChannel.us</channel>
+  <!--  76 Space (a0c3) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="Space.co@movistar" site_id="CO1#Space.co">Space.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="Space.co@mitv" site_id="co#space">Space.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Space.co" site_id="space_colombia">Space.co</channel>
+  <!--  77 Studio Universal (b017) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="StudioUniversal.co@movistar" site_id="CO1#Studio.Universal.co">StudioUniversal.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="StudioUniversal.co@mitv" site_id="co#studio-universal">StudioUniversal.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="StudioUniversal.us" site_id="studio_universal_panregional">StudioUniversal.us</channel>
+  <!--  78 Star Channel (a0c4) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="StarChannel.co@movistar" site_id="CO1#STAR.CHANNEL.co">StarChannel.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="StarChannel.co@mitv" site_id="co#fox">StarChannel.co@mitv</channel>
+  <!--  79 TNT Series (a0cc) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="TNTSeries.co@movistar" site_id="CO1#TNT.Series.co">TNTSeries.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="TNTSeries.co@mitv" site_id="co#tnt-series">TNTSeries.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="TNTSeriesLatinAmerica.us" site_id="tnt_series">TNTSeriesLatinAmerica.us</channel>
+  <!--  80 Cinemax (a0az) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="Cinemax.co@movistar" site_id="CO1#Cinemax.co">Cinemax.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="Cinemax.co@mitv" site_id="co#cinemax">Cinemax.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Cinemax.co" site_id="cinemax_colombia">Cinemax.co</channel>
+  <!--  81 TCM (a0c5) -->
+  <channel site="mi.tv" lang="es" xmltv_id="TCM.co@mitv" site_id="co#tcm">TCM.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="TCMLatinAmerica.us" site_id="tcm_colombia">TCMLatinAmerica.us</channel>
+  <!--  82 Cinecanal (a0ay) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="Cinecanal.co@movistar" site_id="CO1#Cinecanal.co">Cinecanal.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="Cinecanal.co@mitv" site_id="co#cinecanal">Cinecanal.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Cinecanal.co" site_id="cinecanal_colombia">Cinecanal.co</channel>
+  <!--  83 Sony Movies (b024) -->
+  <channel site="gatotv.com" lang="es" xmltv_id="SonyMovies.co" site_id="sony_movies_colombia">SonyMovies.co</channel>
+  <!--  85 De Película (a0e4) -->
+  <channel site="gatotv.com" lang="es" xmltv_id="DePelicula.mx" site_id="de_pelicula">DePelicula.mx</channel>
+  <!--  86 Golden (a0fz) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="Golden.co@movistar" site_id="CO1#GOLDEN.HD.co">Golden.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="Golden.co@mitv" site_id="co#golden">Golden.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Golden.co" site_id="golden_colombia">Golden.co</channel>
+  <!--  87 Golden Edge (a0g0) -->
+  <channel site="gatotv.com" lang="es" xmltv_id="GoldenEdge.mx@gatotv" site_id="golden_edge">GoldenEdge.mx@gatotv</channel>
+  <!--  90 FX (a0bm) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="FX.co@movistar" site_id="CO1#FX.co">FX.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="FX.co@mitv" site_id="co#fx">FX.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="FX.co" site_id="fx_colombia">FX.co</channel>
+  <!--  93 Europa Europa (b026) -->
+  <channel site="gatotv.com" lang="es" xmltv_id="EuropaEuropa.ar" site_id="europa_europa">EuropaEuropa.ar</channel>
+  <!--  94 Comedy Central (a0dr) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="ComedyCentral.co@movistar" site_id="CO1#Comedy.Central.co">ComedyCentral.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="ComedyCentral.co@mitv" site_id="co#comedy-central">ComedyCentral.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="ComedyCentral.co" site_id="comedy_central_colombia">ComedyCentral.co</channel>
+  <!-- 112 DHE (a0gs) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="DHE.co@movistar" site_id="CO1#DHE.HD.co">DHE.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="DHE.co@mitv" site_id="co#dhe">DHE.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="DHE.us" site_id="dhe">DHE.us</channel>
+  <!-- Infantiles -->
+  <!--  95 Cartoon Network (a068) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="CartoonNetwork.co@movistar" site_id="CO1#Cartoon.Network.co">CartoonNetwork.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="CartoonNetwork.co@mitv" site_id="co#cartoon-network">CartoonNetwork.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="CartoonNetwork.co" site_id="cartoon_network_colombia">CartoonNetwork.co</channel>
+  <!--  96 Cartoonito (a0ax) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="Cartoonito.co@movistar" site_id="CO1#CARTOONITO.co">Cartoonito.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="Cartoonito.co@mitv" site_id="co#boomerang-cartoon">Cartoonito.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Cartoonito.co" site_id="cartoonito_colombia">Cartoonito.co</channel>
+  <!--  97 Tooncast (a0cd) -->
+  <channel site="mi.tv" lang="es" xmltv_id="Tooncast.us@mitv" site_id="co#tooncast">Tooncast.us@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Tooncast.us" site_id="tooncast">Tooncast.us</channel>
+  <!--  99 Disney Channel (b107) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="DisneyChannel.co@movistar" site_id="CO1#Disney.Channel.co">DisneyChannel.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="DisneyChannel.co@mitv" site_id="co#disney-multicountry">DisneyChannel.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="DisneyChannel.co" site_id="disney_channel_colombia">DisneyChannel.co</channel>
+  <!-- 100 Disney Junior (a066) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="DisneyJunior.co@movistar" site_id="CO1#DISNEY.JUNIOR.co">DisneyJunior.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="DisneyJunior.co@mitv" site_id="co#disney-jr-norte">DisneyJunior.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="DisneyJunior.co" site_id="disney_junior_colombia">DisneyJunior.co</channel>
+  <!-- 101 Baby TV (a0as) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="BabyTV.co@movistar" site_id="CO1#BABY.TV.co">BabyTV.co@movistar</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="BabyTVLatinAmerica.us" site_id="baby_tv_latinoamerica">BabyTVLatinAmerica.us</channel>
+  <!-- 102 Discovery Kids (a0b7) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="DiscoveryKids.co@movistar" site_id="CO1#Discovery.Kids.co">DiscoveryKids.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="DiscoveryKids.co@mitv" site_id="co#discovery-kids">DiscoveryKids.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="DiscoveryKids.co" site_id="discovery_kids_colombia">DiscoveryKids.co</channel>
+  <!-- Documentales -->
+  <!-- 104 Discovery Channel (a0b5) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="DiscoveryChannel.co@movistar" site_id="CO1#Discovery.Channel.co">DiscoveryChannel.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="DiscoveryChannel.co@mitv" site_id="co#discovery-channel">DiscoveryChannel.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="DiscoveryChannel.co" site_id="discovery_channel_colombia">DiscoveryChannel.co</channel>
+  <!-- 105 Animal Planet (a0ar) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="AnimalPlanet.co@movistar" site_id="CO1#Animal.Planet.co">AnimalPlanet.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="AnimalPlanet.co@mitv" site_id="co#animal-planet">AnimalPlanet.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="AnimalPlanetLatinAmerica.us" site_id="animal_planet_colombia">AnimalPlanetLatinAmerica.us</channel>
+  <!-- 106 Discovery Turbo (a0b9) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="DiscoveryTurbo.co@movistar" site_id="CO1#Discovery.Turbo.co">DiscoveryTurbo.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="DiscoveryTurbo.co@mitv" site_id="co#discovery-turbo">DiscoveryTurbo.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="DiscoveryTurboLatinAmerica.us" site_id="discovery_turbo_latinoamerica">DiscoveryTurboLatinAmerica.us</channel>
+  <!-- 107 TLC (a0c9) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="TLC.co@movistar" site_id="CO1#TLC.co">TLC.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="TLC.co@mitv" site_id="co#discovery-tlc">TLC.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="TLCLatinAmerica.us" site_id="tlc_colombia">TLCLatinAmerica.us</channel>
+  <!-- 108 Investigation Discovery (a0br) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="InvestigationDiscovery.co@movistar" site_id="CO1#ID.-.Investigation.Discovery.co">InvestigationDiscovery.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="InvestigationDiscovery.co@mitv" site_id="co#discovery-id">InvestigationDiscovery.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="InvestigationDiscovery.co" site_id="investigation_discovery_colombia">InvestigationDiscovery.co</channel>
+  <!-- 109 National Geographic (a0bw) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="NationalGeographic.co@movistar" site_id="CO1#National.Geographic.co">NationalGeographic.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="NationalGeographic.co@mitv" site_id="co#national-geographic">NationalGeographic.co@mitv</channel>
+  <!-- 110 History (a0bp) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="History.co@movistar" site_id="CO1#History.Channel.co">History.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="History.co@mitv" site_id="co#history">History.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="HistoryLatinAmerica.us" site_id="history_colombia">HistoryLatinAmerica.us</channel>
+  <!-- 111 History 2 (a0bo) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="History2.co@movistar" site_id="CO1#History.2.co">History2.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="History2.co@mitv" site_id="co#h2">History2.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="History2.co" site_id="history_2_colombia">History2.co</channel>
+  <!-- 114 Discovery Home & Health (a0b6) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="DiscoveryHomeHealth.co@movistar" site_id="CO1#Discovery.H&amp;amp;H.co">DiscoveryHomeHealth.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="DiscoveryHomeHealth.co@mitv" site_id="co#discovery-home-and-health">DiscoveryHomeHealth.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="DiscoveryHomeHealth.co" site_id="discovery_home_and_health_colombia">DiscoveryHomeHealth.co</channel>
+  <!-- 115 HGTV (b108) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="HGTV.co@movistar" site_id="CO1#HGTV.co">HGTV.co@movistar</channel>
+  <channel site="programacion.tcc.com.uy" lang="es" xmltv_id="HGTV.co@tcc" site_id="289">HGTV.co@tcc</channel>
+  <!-- 116 Food Network (b109) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="FoodNetwork.co@movistar" site_id="CO1#Food.Network.co">FoodNetwork.co@movistar</channel>
+  <channel site="programacion.tcc.com.uy" lang="es" xmltv_id="FoodNetwork.co@tcc" site_id="321">FoodNetwork.co@tcc</channel>
+  <!-- 117 El Gourmet (b110) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="ElGourmet.co@movistar" site_id="CO1#El.Gourmet.co">ElGourmet.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="ElGourmet.co@mitv" site_id="co#el-gourmet">ElGourmet.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="ElGourmet.ar" site_id="elgourmet">ElGourmet.ar</channel>
+  <!-- 118 TV Agro (a0dg) -->
+  <channel site="mi.tv" lang="es" xmltv_id="TVAgro.co@mitv" site_id="co#tv-agro">TVAgro.co@mitv</channel>
   <!-- Música -->
-  <channel site="mi.tv" lang="es" xmltv_id="RumbaTV.co" site_id="pe#rumba-tv">RumbaTV.co</channel>
+  <!--  38 MTV (a0bv) -->
+  <channel site="epgshare01.online" lang="es" xmltv_id="MTV.co@movistar" site_id="CO1#MTV.co">MTV.co@movistar</channel>
+  <channel site="mi.tv" lang="es" xmltv_id="MTV.co@mitv" site_id="co#m-tv">MTV.co@mitv</channel>
   <channel site="gatotv.com" lang="es" xmltv_id="MTV.co" site_id="mtv_colombia">MTV.co</channel>
+  <!--  40 Bandamax (b008) -->
   <channel site="gatotv.com" lang="es" xmltv_id="Bandamax.mx" site_id="bandamax">Bandamax.mx</channel>
+  <!--  41 Rumba TV (a0dh) -->
+  <channel site="mi.tv" lang="es" xmltv_id="RumbaTV.co" site_id="pe#rumba-tv">RumbaTV.co</channel>
+  <!--  42 Tele Nostalgia (a0di) -->
+  <channel site="mi.tv" lang="es" xmltv_id="TeleNostalgia.co@mitv" site_id="co#tele-nostalgia">TeleNostalgia.co@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="TeleNostalgia.co" site_id="telenostalgia">TeleNostalgia.co</channel>
+  <!-- 120 Telehit (b006) -->
   <channel site="gatotv.com" lang="es" xmltv_id="Telehit.mx" site_id="telehit">Telehit.mx</channel>
+  <!-- 121 Telehit Música (b007) -->
   <channel site="gatotv.com" lang="es" xmltv_id="TelehitMusica.mx" site_id="telehit_musica">TelehitMusica.mx</channel>
+  <!-- Religiosos -->
+  <!--  33 Cristovisión (a09u) -->
+  <channel site="mi.tv" lang="es" xmltv_id="Cristovision.co" site_id="co#cristo-vision">Cristovision.co</channel>
+  <!--  34 Enlace (a0bc) -->
+  <channel site="mi.tv" lang="es" xmltv_id="Enlace.cr@mitv" site_id="co#enlace">Enlace.cr@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="Enlace.cr" site_id="enlace">Enlace.cr</channel>
+  <!--  35 Bethel TV (a0at) -->
+  <channel site="mi.tv" lang="es" xmltv_id="BethelTV.pe@mitv" site_id="pe#bethel">BethelTV.pe@mitv</channel>
+  <!--  36 Teleamiga (a0ds) -->
+  <channel site="mi.tv" lang="es" xmltv_id="TeleAmiga.co@mitv" site_id="co#teleamiga">TeleAmiga.co@mitv</channel>
+  <!--  37 EWTN (a0bi) -->
+  <channel site="mi.tv" lang="es" xmltv_id="EWTN.us@mitv" site_id="co#ewtn">EWTN.us@mitv</channel>
+  <channel site="gatotv.com" lang="es" xmltv_id="EWTN.us" site_id="ewtn_en_espanol">EWTN.us</channel>
 </channels>
