@@ -1,13 +1,13 @@
 {
- "generado": "2026-11-12T15:29:53.303Z",
- "gatotvOffset": -7,
- "corrimientoGatotvMin": 120,
+ "generado": "2026-11-12T23:44:31.540Z",
+ "gatotvOffset": -6,
+ "corrimientoGatotvMin": 60,
  "canales": {
   "a05m": {
    "id": "CanalRCN.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 27,
+   "programas": 22,
    "descartadas": [
     "CanalRCN.co:24h",
     "CanalRCN.co@gatotv:24h"
@@ -17,14 +17,16 @@
    "id": "SenalColombia.co@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 103,
-   "descartadas": []
+   "programas": 81,
+   "descartadas": [
+    "SenalColombia.co:24h"
+   ]
   },
   "a05p": {
    "id": "Canal1.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 54,
+   "programas": 42,
    "descartadas": [
     "Canal1.co@mitv:24h",
     "Canal1.co:24h"
@@ -34,7 +36,7 @@
    "id": "DisneyJunior.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 87,
+   "programas": 66,
    "descartadas": [
     "DisneyJunior.co@mitv:24h",
     "DisneyJunior.co:24h"
@@ -44,7 +46,7 @@
    "id": "CartoonNetwork.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 143,
+   "programas": 84,
    "descartadas": [
     "CartoonNetwork.co@mitv:24h",
     "CartoonNetwork.co:24h"
@@ -54,14 +56,14 @@
    "id": "Cristovision.co",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 54,
+   "programas": 46,
    "descartadas": []
   },
   "a0a6": {
    "id": "Zoom.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 75,
+   "programas": 60,
    "descartadas": [
     "Zoom.co@mitv:24h",
     "Zoom.co:24h"
@@ -71,7 +73,7 @@
    "id": "CaracolTV.co@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 39,
+   "programas": 32,
    "descartadas": [
     "CaracolTV.co:24h"
    ]
@@ -80,7 +82,7 @@
    "id": "AMC.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 20,
+   "programas": 16,
    "descartadas": [
     "AMC.co@mitv:24h"
    ]
@@ -89,7 +91,7 @@
    "id": "AnimalPlanet.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 49,
+   "programas": 39,
    "descartadas": [
     "AnimalPlanet.co@mitv:24h",
     "AnimalPlanetLatinAmerica.us:24h"
@@ -99,7 +101,7 @@
    "id": "BabyTV.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 217,
+   "programas": 154,
    "descartadas": [
     "BabyTVLatinAmerica.us:24h"
    ]
@@ -108,14 +110,14 @@
    "id": "BethelTV.pe@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 54,
+   "programas": 45,
    "descartadas": []
   },
   "a0au": {
    "id": "Canal13.co@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 45,
+   "programas": 37,
    "descartadas": [
     "Canal13.co:24h"
    ]
@@ -124,7 +126,7 @@
    "id": "CanalTRO.co@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 47,
+   "programas": 38,
    "descartadas": [
     "CanalTRO.co:24h"
    ]
@@ -133,7 +135,7 @@
    "id": "Cartoonito.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 97,
+   "programas": 75,
    "descartadas": [
     "Cartoonito.co@mitv:24h",
     "Cartoonito.co:24h"
@@ -143,7 +145,7 @@
    "id": "Cinecanal.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 18,
+   "programas": 14,
    "descartadas": [
     "Cinecanal.co@mitv:24h",
     "Cinecanal.co:24h"
@@ -153,7 +155,7 @@
    "id": "Cinemax.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 25,
+   "programas": 18,
    "descartadas": [
     "Cinemax.co@mitv:24h",
     "Cinemax.co:24h"
@@ -163,7 +165,7 @@
    "id": "CityTV.co@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 32,
+   "programas": 27,
    "descartadas": [
     "CityTV.co:24h"
    ]
@@ -172,7 +174,7 @@
    "id": "CNNenEspanol.us@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 32,
+   "programas": 24,
    "descartadas": [
     "CNNenEspanol.us@mitv:24h",
     "CNNenEspanol.us:24h"
@@ -182,14 +184,14 @@
    "id": "CNNInternational.us",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 58,
+   "programas": 48,
    "descartadas": []
   },
   "a0b5": {
    "id": "DiscoveryChannel.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 45,
+   "programas": 34,
    "descartadas": [
     "DiscoveryChannel.co@mitv:24h",
     "DiscoveryChannel.co:24h"
@@ -199,7 +201,7 @@
    "id": "DiscoveryHomeHealth.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 41,
+   "programas": 33,
    "descartadas": [
     "DiscoveryHomeHealth.co@mitv:24h",
     "DiscoveryHomeHealth.co:24h"
@@ -209,7 +211,7 @@
    "id": "DiscoveryKids.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 114,
+   "programas": 86,
    "descartadas": [
     "DiscoveryKids.co@mitv:24h",
     "DiscoveryKids.co:24h"
@@ -219,7 +221,7 @@
    "id": "DiscoveryTurbo.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 50,
+   "programas": 40,
    "descartadas": [
     "DiscoveryTurbo.co@mitv:24h",
     "DiscoveryTurboLatinAmerica.us:24h"
@@ -229,14 +231,14 @@
    "id": "DWEspanol.de",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 89,
+   "programas": 72,
    "descartadas": []
   },
   "a0bd": {
    "id": "ESPN2.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 24,
+   "programas": 19,
    "descartadas": [
     "ESPN2LatinAmerica.us:24h"
    ]
@@ -245,7 +247,7 @@
    "id": "ESPN3.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 27,
+   "programas": 22,
    "descartadas": [
     "ESPN3.co:24h"
    ]
@@ -254,7 +256,7 @@
    "id": "ESPN.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 12,
+   "programas": 11,
    "descartadas": [
     "ESPN.co:24h"
    ]
@@ -263,7 +265,7 @@
    "id": "EWTN.us@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 65,
+   "programas": 54,
    "descartadas": [
     "EWTN.us:24h"
    ]
@@ -272,7 +274,7 @@
    "id": "ESPN5.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 28,
+   "programas": 20,
    "descartadas": [
     "ESPN5.co:24h"
    ]
@@ -281,7 +283,7 @@
    "id": "FX.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 21,
+   "programas": 16,
    "descartadas": [
     "FX.co@mitv:24h",
     "FX.co:24h"
@@ -291,7 +293,7 @@
    "id": "History2.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 47,
+   "programas": 35,
    "descartadas": [
     "History2.co@mitv:24h",
     "History2.co:24h"
@@ -301,7 +303,7 @@
    "id": "History.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 53,
+   "programas": 40,
    "descartadas": [
     "History.co@mitv:24h",
     "HistoryLatinAmerica.us:24h"
@@ -311,7 +313,7 @@
    "id": "InvestigationDiscovery.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 46,
+   "programas": 37,
    "descartadas": [
     "InvestigationDiscovery.co@mitv:24h",
     "InvestigationDiscovery.co:24h"
@@ -321,7 +323,7 @@
    "id": "LasEstrellas.co",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 46,
+   "programas": 38,
    "descartadas": [
     "LasEstrellas.co@mitv:24h"
    ]
@@ -330,7 +332,7 @@
    "id": "MTV.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 68,
+   "programas": 51,
    "descartadas": [
     "MTV.co@mitv:24h",
     "MTV.co:24h"
@@ -340,7 +342,7 @@
    "id": "NationalGeographic.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 43,
+   "programas": 33,
    "descartadas": [
     "NationalGeographic.co@mitv:24h"
    ]
@@ -349,14 +351,14 @@
    "id": "RT.ru@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 90,
+   "programas": 73,
    "descartadas": []
   },
   "a0c2": {
    "id": "SonyChannel.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 42,
+   "programas": 30,
    "descartadas": [
     "SonyChannelAndes.us:24h"
    ]
@@ -365,7 +367,7 @@
    "id": "Space.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 20,
+   "programas": 17,
    "descartadas": [
     "Space.co@mitv:24h",
     "Space.co:24h"
@@ -375,7 +377,7 @@
    "id": "StarChannel.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 24,
+   "programas": 18,
    "descartadas": [
     "StarChannel.co@mitv:24h"
    ]
@@ -384,7 +386,7 @@
    "id": "TCM.co@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 21,
+   "programas": 17,
    "descartadas": [
     "TCMLatinAmerica.us:24h"
    ]
@@ -393,7 +395,7 @@
    "id": "Teleantioquia.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 55,
+   "programas": 41,
    "descartadas": [
     "Teleantioquia.co@mitv:24h",
     "Teleantioquia.co:24h"
@@ -403,7 +405,7 @@
    "id": "Telecafe.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 59,
+   "programas": 48,
    "descartadas": [
     "Telecafe.co@mitv:24h",
     "Telecafe.co:24h"
@@ -413,7 +415,7 @@
    "id": "Tlnovelas.co",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 39,
+   "programas": 29,
    "descartadas": [
     "Tlnovelas.co@mitv:23h"
    ]
@@ -422,7 +424,7 @@
    "id": "TLC.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 36,
+   "programas": 25,
    "descartadas": [
     "TLC.co@mitv:24h",
     "TLCLatinAmerica.us:24h"
@@ -432,7 +434,7 @@
    "id": "TNT.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 24,
+   "programas": 17,
    "descartadas": [
     "TNT.co@mitv:24h"
    ]
@@ -441,7 +443,7 @@
    "id": "TNTNovelas.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 47,
+   "programas": 35,
    "descartadas": [
     "TNTNovelas.co:24h"
    ]
@@ -450,7 +452,7 @@
    "id": "Tooncast.us@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 106,
+   "programas": 87,
    "descartadas": [
     "Tooncast.us:24h"
    ]
@@ -459,7 +461,7 @@
    "id": "WarnerChannel.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 46,
+   "programas": 30,
    "descartadas": [
     "WarnerChannel.co@mitv:24h",
     "WarnerChannel.us:24h"
@@ -469,7 +471,7 @@
    "id": "CanalCapital.co",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 48,
+   "programas": 39,
    "descartadas": [
     "CanalCapital.co@gatotv:24h"
    ]
@@ -478,21 +480,21 @@
    "id": "TVAgro.co@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 88,
+   "programas": 71,
    "descartadas": []
   },
   "a0dh": {
    "id": "RumbaTV.co",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 23,
+   "programas": 20,
    "descartadas": []
   },
   "a0di": {
    "id": "TeleNostalgia.co@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 16,
+   "programas": 13,
    "descartadas": [
     "TeleNostalgia.co:24h"
    ]
@@ -501,7 +503,7 @@
    "id": "ComedyCentral.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 95,
+   "programas": 75,
    "descartadas": [
     "ComedyCentral.co@mitv:24h",
     "ComedyCentral.co:24h"
@@ -511,14 +513,14 @@
    "id": "TeleAmiga.co@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 67,
+   "programas": 54,
    "descartadas": []
   },
   "a0dx": {
    "id": "WinSports.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 22,
+   "programas": 18,
    "descartadas": [
     "WinSports.co:24h"
    ]
@@ -527,14 +529,14 @@
    "id": "DePelicula.mx",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 26,
+   "programas": 21,
    "descartadas": []
   },
   "a0fz": {
    "id": "Golden.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 21,
+   "programas": 17,
    "descartadas": [
     "Golden.co@mitv:24h",
     "Golden.co:24h"
@@ -544,14 +546,14 @@
    "id": "GoldenEdge.mx@gatotv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 25,
+   "programas": 19,
    "descartadas": []
   },
   "a0g7": {
    "id": "ESPN4.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 33,
+   "programas": 25,
    "descartadas": [
     "ESPN4.co:24h"
    ]
@@ -560,7 +562,7 @@
    "id": "CanalCongreso.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 50,
+   "programas": 45,
    "descartadas": [
     "CanalCongreso.co:24h"
    ]
@@ -569,14 +571,14 @@
    "id": "Teleislas.co",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 76,
+   "programas": 62,
    "descartadas": []
   },
   "a0gs": {
    "id": "DHE.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 22,
+   "programas": 17,
    "descartadas": [
     "DHE.co@mitv:24h",
     "DHE.us:24h"
@@ -586,7 +588,7 @@
    "id": "Univision.co@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 45,
+   "programas": 37,
    "descartadas": [
     "Univision.co:24h"
    ]
@@ -595,7 +597,7 @@
    "id": "AztecaCorazon.mx@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 37,
+   "programas": 31,
    "descartadas": [
     "AztecaCorazon.mx:24h"
    ]
@@ -604,42 +606,42 @@
    "id": "Telehit.mx",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 62,
+   "programas": 49,
    "descartadas": []
   },
   "b007": {
    "id": "TelehitMusica.mx",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 55,
+   "programas": 43,
    "descartadas": []
   },
   "b008": {
    "id": "Bandamax.mx",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 48,
+   "programas": 37,
    "descartadas": []
   },
   "b015": {
    "id": "AMCSeries.us@tcc",
    "origen": "anterior",
    "horas24": 24,
-   "programas": 38,
+   "programas": 28,
    "descartadas": []
   },
   "b016": {
    "id": "USANetwork.co",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 28,
+   "programas": 22,
    "descartadas": []
   },
   "b017": {
    "id": "StudioUniversal.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 25,
+   "programas": 20,
    "descartadas": [
     "StudioUniversal.co@mitv:23h",
     "StudioUniversal.us:24h"
@@ -649,7 +651,7 @@
    "id": "Lifetime.co@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 33,
+   "programas": 26,
    "descartadas": [
     "Lifetime.co:24h"
    ]
@@ -658,21 +660,21 @@
    "id": "DistritoComedia.mx",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 29,
+   "programas": 24,
    "descartadas": []
   },
   "b020": {
    "id": "bitMe.mx",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 55,
+   "programas": 45,
    "descartadas": []
   },
   "b022": {
    "id": "ESPN6.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 22,
+   "programas": 17,
    "descartadas": [
     "ESPN6.co:24h"
    ]
@@ -681,7 +683,7 @@
    "id": "ESPN7.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 23,
+   "programas": 19,
    "descartadas": [
     "ESPN7.co:24h"
    ]
@@ -690,21 +692,21 @@
    "id": "SonyMovies.co",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 32,
+   "programas": 24,
    "descartadas": []
   },
   "b026": {
    "id": "EuropaEuropa.ar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 23,
+   "programas": 19,
    "descartadas": []
   },
   "b027": {
    "id": "FilmArts.ar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 39,
+   "programas": 31,
    "descartadas": [
     "FilmArts.ar@mitv:24h"
    ]
@@ -713,7 +715,7 @@
    "id": "CanalInstitucional.co@mitv",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 78,
+   "programas": 62,
    "descartadas": [
     "CanalInstitucional.co:24h"
    ]
@@ -722,7 +724,7 @@
    "id": "Telemundo.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 37,
+   "programas": 28,
    "descartadas": [
     "Telemundo.co:24h"
    ]
@@ -731,14 +733,14 @@
    "id": "AdultSwim.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 92,
+   "programas": 73,
    "descartadas": []
   },
   "b103": {
    "id": "AXN.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 44,
+   "programas": 35,
    "descartadas": [
     "AXN.co@mitv:24h",
     "AXN.co:24h"
@@ -748,7 +750,7 @@
    "id": "UniversalTV.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 29,
+   "programas": 24,
    "descartadas": [
     "UniversalTV.co@mitv:24h",
     "UniversalTV.us:24h"
@@ -758,7 +760,7 @@
    "id": "EEntertainment.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 48,
+   "programas": 37,
    "descartadas": [
     "EEntertainment.co:24h"
    ]
@@ -767,7 +769,7 @@
    "id": "AE.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 51,
+   "programas": 39,
    "descartadas": [
     "AE.co@mitv:24h",
     "AE.co:24h"
@@ -777,7 +779,7 @@
    "id": "DisneyChannel.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 93,
+   "programas": 71,
    "descartadas": [
     "DisneyChannel.co@mitv:24h",
     "DisneyChannel.co:24h"
@@ -787,7 +789,7 @@
    "id": "HGTV.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 69,
+   "programas": 53,
    "descartadas": [
     "HGTV.co@tcc:24h"
    ]
@@ -796,7 +798,7 @@
    "id": "FoodNetwork.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 65,
+   "programas": 50,
    "descartadas": [
     "FoodNetwork.co@tcc:24h"
    ]
@@ -805,7 +807,7 @@
    "id": "ElGourmet.co@movistar",
    "origen": "hoy",
    "horas24": 24,
-   "programas": 77,
+   "programas": 59,
    "descartadas": [
     "ElGourmet.co@mitv:24h",
     "ElGourmet.ar:24h"
